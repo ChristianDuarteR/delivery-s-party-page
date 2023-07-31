@@ -1,0 +1,201 @@
+body{
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background: white;
+    padding: 0 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.caja{
+    background: -webkit-linear-gradient(45deg, white, #ffe5e5);
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logo img{
+    position: relative;
+}
+
+nav{
+    position: relative;
+    top: 100px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.datos{
+    text-align: center;
+    width: 60%;
+    margin: 0 1.5%;
+    padding: 7px 6px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+#logeo{
+    border: 2px solid #F1E4FF;
+    background-color: #F1E4FF;;
+}
+
+#logeo a{
+    color: #ff6801;
+}
+
+#registro{
+    border: 2px solid #ff6801;
+    background-color: #ff6801;
+}
+
+#registro a{
+    color: white;
+}
+
+.informacion{
+    
+    display: flex;
+    background:-webkit-linear-gradient(#ffe5e5, white);
+    padding: 0 0;
+    width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+#domicilio{
+    width: 470px;
+    box-shadow: -21px 20px 22px -8px orangered;
+    transition: 400ms;
+}
+
+#domicilio:hover{
+    opacity: 0.3;
+}
+
+.propaganda{
+    display: grid;
+    justify-items: start;
+    align-content: center;
+}
+
+.propaganda p{
+    color: #FF6801;
+}
+
+.propaganda button{
+    width: 40%;
+    padding: 12px 32px;
+    background: #FFB027;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 1s;    
+}
+
+.propaganda button:hover{
+    background: darkorange;
+    transform: scale(1.2);
+}
+
+.eslogan-principal{
+    text-transform: uppercase;
+    font-family: initial;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 98px;
+    text-align: left;
+    margin: 0 0 10px;
+    clear: left;
+}
+
+#eslogan-secundario{
+    padding-bottom: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    background: url(imagenes/bg.jpg);
+    padding: 70px;
+}
+
+footer nav{
+    position: inherit;
+}
+
+footer nav li{
+    margin: 0 0 0 15px;
+}
+
+footer nav a{
+    text-transform: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+
+}
+
+footer nav a:hover{
+    color: #585757;
+    text-decoration: underline;
+}
+
+footer img{
+    width: 162px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-final{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.cajas-pagina ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.cajas-pagina li{
+    display: flex;
+    padding: 10px;
+}
+
+.cajas-pagina p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: white;
+}
