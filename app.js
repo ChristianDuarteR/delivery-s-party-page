@@ -9,7 +9,10 @@ function myFunction() {
 
   function hoverEmail() {
     var x = document.getElementById("myEmail");
+    var y = document.getElementById("myName");
         if (x.type == "password") {
-            x.type = "text";
+          x.type = "text";
+        } if (y.type == "password") {
+          y.type = "text";
         }
     }

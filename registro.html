@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Delivery's Party </title> 
+        <link rel="stylesheet" href="style-register.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <div class="container">
+                    <h2 id="saludo"><Bold>Hola!</Bold></h2>
+                    <h3 id="bienvenida">Registrate para empezar a ordenar</h3>
+                    <br><br><br><br>
+
+                    <div class="entryarea">
+                        <input type="password" id="myName" required oninput="hoverEmail()"> 
+                        <div class="labelline">
+                            <p> <img class="iconos" src="imagenes/nombre.png" alt="persona"> nombre completo</p> 
+                        </div>
+                    </div><br><br>
+
+
+                    <div class="entryarea">
+                        <input type="password" id="myEmail" required oninput="hoverEmail()"> 
+                        <div class="labelline">
+                            <p> <img class="iconos" src="imagenes/correo.png" alt="email"> correo electronico</p> 
+                        </div>
+                    </div><br><br>
+                    
+                    <div class="entryarea">
+                        <input type="password" id="myInput" required>
+                        <div class="labelline">
+                            <p> <img class="iconos" src="imagenes/locked.png" alt="candado"> contraseña</p>
+                        </div>
+                    </div><br><br>
+                    <label> <input type="checkbox" onclick="myFunction()" id="checkbox">Mostrar contraseña</label>
+                    <br><br>
+                    <input type="submit" id="mySubmit" value="Registrarse">
+                </div>
+            </section>
+
+            <section class="imagen">
+                <h1> Donde tu gusto es nuestra inspiracion </h1>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+    <footer>
+
+    </footer>
+</html>

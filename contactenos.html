@@ -5,30 +5,23 @@
         <meta charset="UTF-8">
         <title>Contacto - Delivery's Party</title>
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-contact.css">
 
      </head>
 
      <body>
         <header>
-            <header>
-                <div class="caja">
-                    <nav>
-                        <ul>
-                            <li><a href="restaurantes.html">Restaurantes</a></li>
-                            <li><a href="informacion.html">Acerca de</a></li>
-                            <li><a href="index.html">Home</a></li>
-                        </ul>
-                    </nav>
-                    <h1 id="logo"><img src="imagenes/logo.png" alt="logo"></h1>
-                    <nav>
-                        <ul>
-                            <li class="datos" id="logeo"><a href="login.html"> Ingresar</a></li>
-                            <li class="datos" id="registro"><a href="registro.html"> Registrarse</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barberia Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href=index.html>Home</a></li>
+                        <li><a href="restaurantes.html">Restaurantes</a></li>
+                        <li><a href="contactenos.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <main>
             <form>
@@ -53,7 +46,7 @@
                     <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
                     
                     <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
-               </fieldset>>
+               </fieldset>
 
                <fieldset>
                     <legend>En cual horario prefiere ser atendido?</legend>
@@ -64,8 +57,8 @@
                     </select>
                </fieldset>
 
-               <label class="checkbox"><input type="checkbox" checked>Le gustaria recibir novedades de la Barberia 
-                Alura?</label>
+               <label class="checkbox"><input type="checkbox" checked>Le gustaria recibir novedades de 
+                Delivery's Party? </label>
 
                 <input type="submit" name="contacto" value="Enviar formulario" class="enviar">
             </form>
@@ -101,8 +94,46 @@
         </main>
 
         <footer>
-            <img src="imagenes/logo-blanco.png" alt="Logo de la Barberia Alura">
-            <p class="copyright">&copy Copyright Barberia Alura - 2020</p>
+            <footer>
+                <div class="caja-final">
+                    <div class="cajas-pagina">
+                        <ul>
+                        <li><p><strong> Empresa </strong></p></li>
+                        <nav>
+                            <li><a href="nosotros.html"> De nosotros</a></li>
+                            <li><a href="comentarios.html"> Comentarios </a></li>
+                            <li><a href="contactenos.html"> Contactenos </a></li>
+                        </nav>
+                        </ul>
+                    </div>
+                    <div class="cajas-pagina">
+                        <ul>
+                        <li><p><strong> Soporte al cliente </strong></p></li>
+                        <nav>
+                            <li><a href="ayuda.html"> Centro de ayuda</a></li>
+                            <li><a href="telefonos.html"> Telefonos </a></li>
+                        </nav>
+                        </ul>
+                    </div>
+                    <div class="cajas-pagina"> 
+                        <ul>
+                        <li><p><strong> Legal </strong></p></li>
+                        <nav>
+                            <li><a href="politicas.html"> Politicas de cookies</a></li>
+                            <li><a href="privacidad.html"> Politicas de privacidad </a></li>
+                            <li><a href="terminos.html"> Terminos y condiciones </a></li>
+                        </nav>
+                        </ul>
+                    </div>
+                    <div class="cajas-pagina">
+                        <ul>
+                        <li><p><strong> Instala la App </strong></p></li>
+                        <li><img src="imagenes/google.png" alt="Google Play"></li>
+                        <li><img src="imagenes/appstore.png" alt="App Store"></li>
+                        </ul>
+                    </div>
+                </div>
+        </footer>
         </footer>
 
     </body>
