@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background: rgb(244, 140, 42);
+    padding: 10px;
+    color: #fff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.caja{
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logo img{
+    position: relative;
+}
+
+nav{
+    position: relative;
+    top: 100px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.datos{
+    text-align: center;
+    width: 60%;
+    margin: 0 1.5%;
+    padding: 7px 6px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+#logeo{
+    border: 2px solid #F1E4FF;
+    background-color: #F1E4FF;;
+}
+
+#logeo a{
+    color: #ff6801;
+}
+
+#registro{
+    border: 2px solid #ff6801;
+    background-color: #ff6801;
+}
+
+#registro a{
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+label, select{
+    width: 100px;
+    height: 20px;
+}
+
+.lista {
+    width: 500px;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imagen {
+    flex-direction:row-reverse;
+}
+
+.restaurantes-lista {
+    list-style: none;
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+}
+.restaurante-item {
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.restaurante-item:hover{
+    border: 3px solid blue;
+}
+
+.restaurante-imagen {
+    border: 30px solid white; 
+    max-width: 100%;
+    width: 500px;
+    display: none;
+}

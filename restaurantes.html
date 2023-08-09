@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-rest.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <title> Delivery's Partys</title>
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <nav>
+                    <ul>
+                        <li><a href="restaurantes.html">Restaurantes</a></li>
+                        <li><a href="informacion.html">Acerca de</a></li>
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </nav>
+                <h1 id="logo"><img src="imagenes/logo.png" alt="logo"></h1>
+                <nav>
+                    <ul>
+                        <li class="datos" id="logeo"><a href="login.html"> Ingresar</a></li>
+                        <li class="datos" id="registro"><a href="registro.html"> Registrarse</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="invitacion">
+                <h1> Algunos de nustros restaurantes mas queridos por nuestros usuarios: </h1>
+                <br>
+                  
+            </section>
+            <section class="informacion"> 
+                <label for="ordenarPor">Ordenar por:</label>
+                <select id="ordenarPor">
+                    <option value="calificacion">Calificación</option>
+                    <option value="distancia">Distancia</option>
+                    <option value="precio">Precio</option>
+                </select>
+                <div class="lista">
+                    <ul class="restaurantes-lista" id="restaurantesLista">
+
+                    </ul>
+                </div>
+                <div class="imagen">
+                    <img class="restaurante-imagen" id="imagenRestaurante" src="" alt="Imagen del restaurante">
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+        <footer>
+
+        </footer>
+    </body>
+</html>
