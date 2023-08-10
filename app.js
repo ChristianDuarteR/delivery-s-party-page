@@ -28,14 +28,14 @@ function alertRegister() {
 
 //=======================script para pagina de restaurantes================================================
   const restaurantes = [
-    { nombre: "McDonald's", calificacion: 4.5, distancia: 2.5 , precio: 3000 },
-    { nombre: "El corral", calificacion: 3.8, distancia: 5.2, precio: 2000 },
-    { nombre: "Sipote", calificacion: 4.2, distancia: 1.8, precio: 4000 },
-    { nombre: "Qbano", calificacion: 4.1, distancia: 3.9, precio: 2500 },
-    { nombre: "El Carnal", calificacion: 4.1, distancia: 3.4, precio: 3000 },
-    { nombre: "Burger King", calificacion: 4.3, distancia: 3.9, precio: 3000 },
-    { nombre: "Jeno's Pizza", calificacion: 4.0, distancia: 2.5, precio: 1800 },
-    { nombre: "Domino's", calificacion: 4.5, distancia: 3.0, precio: 2700 },
+    { nombre: "McDonald's", calificacion: 4.5, distancia: 250 , precio: 3000 },
+    { nombre: "El corral", calificacion: 3.8, distancia: 520, precio: 2000 },
+    { nombre: "Sipote", calificacion: 4.2, distancia: 180, precio: 4000 },
+    { nombre: "Qbano", calificacion: 4.1, distancia: 390, precio: 2500 },
+    { nombre: "El Carnal", calificacion: 4.1, distancia: 340, precio: 3000 },
+    { nombre: "Burger King", calificacion: 4.3, distancia: 390, precio: 3000 },
+    { nombre: "Jeno's Pizza", calificacion: 4.0, distancia: 250, precio: 1800 },
+    { nombre: "Domino's", calificacion: 4.5, distancia: 300, precio: 2700 },
 ];
 
 const imagenes = [
@@ -49,41 +49,56 @@ const imagenes = [
   "imagenes/dominos.png",
 ];
 
-// Función para mostrar la imagen del restaurante al hacer clic
-function mostrarImagenRestaurante(index) {
-    const imagen = document.getElementById("imagenRestaurante");
-    imagen.src = imagenes[index];
-    imagen.style.display = "block";
-}
+function mostrarDetallesRestaurante(index) {
+  const imagen = document.getElementById("imagenRestaurante");
+  const detalles = restaurantes[index];
 
-// Función para ocultar la imagen del restaurante al hacer clic en la imagen
-function ocultarImagenRestaurante() {
-    const imagen = document.getElementById("imagenRestaurante");
-    imagen.style.display = "none";
+  imagen.src = imagenes[index];
+  imagen.style.display = "block";
+
+  const detallesHTML = `
+      <p class="texto"><strong></strong> ${detalles.nombre}</p>
+      <div class="detalles-calificacion">
+        <div class="estrella">
+          <img src=imagenes/estrella.png alt=estrella-calificatoria>
+          <span>${detalles.calificacion}</span>
+        </div>
+      </div>
+      <p class="texto"><strong>Distancia:</strong> ${detalles.distancia} metros</p>
+      <p class="texto"><strong>Domicilio:</strong> $ ${detalles.precio}</p>
+      `
+
+  const detallesContainer = document.getElementById("detallesRestaurante");
+  detallesContainer.innerHTML = detallesHTML;
 }
 
 // Función para mostrar los restaurantes en la lista
 function mostrarRestaurantes() {
-    const listaRestaurantes = document.getElementById("restaurantesLista");
-    listaRestaurantes.innerHTML = "";
+  const listaRestaurantes = document.getElementById("restaurantesLista");
+  listaRestaurantes.innerHTML = "";
 
-    restaurantes.forEach((restaurante) => {
-        const item = document.createElement("li");
-        item.className = "restaurante-item";
-        item.textContent = `Nombre: ${restaurante.nombre}, Calificación: ${restaurante.calificacion}, Distancia: ${restaurante.distancia} metros, Precio: $ ${restaurante.precio}`;
-        listaRestaurantes.appendChild(item);
-    });
+  restaurantes.forEach((restaurante, index) => {
+      const item = document.createElement("li");
+      item.className = "restaurante-item";
+      item.textContent = restaurante.nombre;
+      listaRestaurantes.appendChild(item);
 
-    listaRestaurantes.querySelectorAll(".restaurante-item").forEach((item, index) => {
-      item.addEventListener("click", () => mostrarImagenRestaurante(index));
-    });
+      item.addEventListener("click", () => mostrarDetallesRestaurante(index));
+  });
 }
 
 // Función para ordenar los restaurantes por la opción seleccionada
 function ordenarRestaurantes() {
     const criterio = document.getElementById("ordenarPor").value;
     restaurantes.sort((a, b) => a[criterio] - b[criterio]);
+    ordenarImagenesRestaurantes();
     mostrarRestaurantes();
+}
+
+// funcion para ordenar las imagenes por la opciones seleccionada
+function ordenarImagenesRestaurantes() {
+  const criterio = document.getElementById("ordenarPor").value;
+  imagenes.sort((a,b) => a[criterio] -b[criterio]);
 }
 
 // Escuchar el evento de cambio en el select para ordenar los restaurantes

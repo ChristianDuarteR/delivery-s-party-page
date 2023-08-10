@@ -5,9 +5,9 @@ body {
 }
 
 header{
-    background: rgb(244, 140, 42);
+    background: #f3ebe3;
     padding: 10px;
-    color: #fff;
+    color: #fff;    
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
@@ -58,21 +58,21 @@ nav a:hover{
 }
 
 #logeo{
-    border: 2px solid #F1E4FF;
-    background-color: #F1E4FF;;
+    border: 2px solid #212121;
+    background-color: #000;;
 }
 
 #logeo a{
-    color: #ff6801;
+    color: white;
 }
 
 #registro{
-    border: 2px solid #ff6801;
-    background-color: #ff6801;
+    border: 2px solid white;
+    background-color: wheat;
 }
 
 #registro a{
-    color: white;
+    color: #000;
 }
 
 main {
@@ -92,14 +92,17 @@ label, select{
     width: 500px;
 }
 
+.titulo-principal{
+    color: #333333;
+    font-size: 36px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
 .informacion{
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.imagen {
-    flex-direction:row-reverse;
 }
 
 .restaurantes-lista {
@@ -109,21 +112,153 @@ label, select{
     min-width: 250px;
 }
 .restaurante-item {
+    display: flex;
     margin-bottom: 10px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
     background-color: #f9f9f9;
     cursor: pointer;
+    justify-content: center;
+
 }
 
 .restaurante-item:hover{
-    border: 3px solid blue;
+    border: 3px solid #e1e3db;
+    color: #e1e3db;
+    background-color: #b9030f;
+    font-size: 15px;
 }
 
 .restaurante-imagen {
-    border: 30px solid white; 
+    border: 10px solid white; 
     max-width: 100%;
-    width: 500px;
+    width: 450px;
     display: none;
+    padding-left: 50px;
+}
+
+#detallesRestaurante{
+    display: inline-grid;
+    margin: 0 10px;
+    padding-left: 200px;
+    justify-items: center;
+}
+
+#ordenarPor {
+    background-color: #f3ebe3;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: auto;
+    height: auto;
+  }
+  
+  #ordenarPor:hover {
+    background-color: #f0d890;
+    color: black;
+  }
+  
+  label[for="ordenarPor"] {
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+  }
+
+.texto{
+    font-style: italic;
+    padding-right: 5px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+
+}
+
+  
+  .detalles .estrella {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .estrella{
+    border: 4px solid #ffdc91;
+    border-radius: 10px;
+    background-color: #ffdc91;
+  }
+
+  .estrella img{
+    width: 18px;
+  }
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    background: url(imagenes/bg.jpg);
+    padding: 70px;
+}
+
+footer nav{
+    position: inherit;
+}
+
+footer nav li{
+    margin: 0 0 0 15px;
+}
+
+footer nav a{
+    text-transform: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+
+}
+
+footer nav a:hover{
+    color: #585757;
+    text-decoration: underline;
+}
+
+footer img{
+    width: 162px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-final{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.cajas-pagina ul{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.cajas-pagina li{
+    display: flex;
+    padding: 10px;
+}
+
+.cajas-pagina p{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: white;
 }
